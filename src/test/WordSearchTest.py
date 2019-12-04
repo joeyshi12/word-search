@@ -36,6 +36,6 @@ class WordSearchTest(unittest.TestCase):
         self.assertEqual(search_words(chars, n), [])
 
     def test_search_words_nonempty_chars_nonzero_n(self):
-        chars = ['s', 'a', 'n', 's']
+        chars = ['s', 'a', 'n', 'd']
         n = 3
-        self.assertEqual(search_words(chars, n), ['ass'])
+        self.assertEqual(search_words(chars, n), ['sad', 'and', 'ads'])

@@ -21,6 +21,18 @@ def next_words(word: str, chars: list) -> list:
             return [word + chars[0]] + next_words(word, chars[1::])
 
 
+def set_minus(lox, loy):
+    if not lox:
+        return []
+    if not loy:
+        return lox
+    else:
+        if lox[0] in loy:
+            return set_minus(lox[1::], loy)
+        else:
+            return [lox[0]] + set_minus(lox[1::], loy)
+
+
 # REQUIRES: chars is a list of single characters
 # EFFECTS: returns a list of all possible words from chars with length n
 def search_words(chars: list, n: int) -> list:
@@ -31,7 +43,7 @@ def search_words(chars: list, n: int) -> list:
             else:
                 return []
         else:
-            return fn_for_words(next_words(word, chars))
+            return fn_for_words(next_words(word, set_minus(chars, [char for char in word])))
 
     def fn_for_words(words: list) -> list:
         if not words:
