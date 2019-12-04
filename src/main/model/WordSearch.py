@@ -3,8 +3,11 @@ import enchant
 
 # EFFECTS: returns true if word is in the Canadian english dictionary; else, returns false
 def is_valid_word(word: str) -> bool:
-    dictionary = enchant.Dict("en_CAN")
-    return dictionary.check(word)
+    if word == '':
+        return False
+    else:
+        dictionary = enchant.Dict("en_CAN")
+        return dictionary.check(word)
 
 
 # EFFECTS: returns a list of all unique next possible strings
@@ -18,7 +21,7 @@ def next_words(word: str, chars: list) -> list:
             return [word + chars[0]] + next_words(word, chars[1::])
 
 
-# REQUIRES: chars is a list of characters
+# REQUIRES: chars is a list of single characters
 # EFFECTS: returns a list of all possible words from chars with length n
 def search_words(chars: list, n: int) -> list:
     def fn_for_word(word: str) -> list:
