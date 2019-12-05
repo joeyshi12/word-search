@@ -8,6 +8,6 @@ if __name__ == '__main__':
         input_int = input("Input Length of Word: ")
         n = int(input_int)
 
-        print("These are all possible word combinations:")
+        print("All possible words:")
         for string in Ws.search_words(chars, n):
             print(string)
