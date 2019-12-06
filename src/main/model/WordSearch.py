@@ -37,6 +37,7 @@ def list_minus(lox: list, loy: list) -> list:
 # REQUIRES: chars is a list of single characters
 def search_words(chars: list, n: int) -> list:
     """returns a list of all possible words from chars with length n"""
+
     def fn_for_word(word: str) -> list:
         if len(word) == n:
             if is_valid_word(word):
