@@ -1,8 +1,8 @@
 import enchant
 
 
-# EFFECTS: returns true if word is in the Canadian english dictionary; else, returns false
 def is_valid_word(word: str) -> bool:
+    """returns true if word is in the Canadian english dictionary; else, returns false"""
     if word == '':
         return False
     else:
@@ -10,8 +10,8 @@ def is_valid_word(word: str) -> bool:
         return dictionary.check(word)
 
 
-# EFFECTS: returns a list of all unique next possible strings
 def next_words(word: str, chars: list) -> list:
+    """returns a list of all unique next possible strings"""
     if not chars:
         return []
     else:
@@ -21,8 +21,8 @@ def next_words(word: str, chars: list) -> list:
             return [word + chars[0]] + next_words(word, chars[1::])
 
 
-# EFFECTS: returns lox - loy
 def list_minus(lox: list, loy: list) -> list:
+    """returns lox - loy"""
     if not lox:
         return []
     if not loy:
@@ -35,8 +35,8 @@ def list_minus(lox: list, loy: list) -> list:
 
 
 # REQUIRES: chars is a list of single characters
-# EFFECTS: returns a list of all possible words from chars with length n
 def search_words(chars: list, n: int) -> list:
+    """returns a list of all possible words from chars with length n"""
     def fn_for_word(word: str) -> list:
         if len(word) == n:
             if is_valid_word(word):
