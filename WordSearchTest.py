@@ -1,6 +1,6 @@
 import unittest
 
-from src.main.model.WordSearch import *
+from WordSearch import *
 
 
 class WordSearchTest(unittest.TestCase):

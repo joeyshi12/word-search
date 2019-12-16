@@ -1,4 +1,4 @@
-import src.main.model.WordSearch as Ws
+import WordSearch as Ws
 
 if __name__ == '__main__':
     while True:
