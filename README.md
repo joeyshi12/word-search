@@ -12,5 +12,5 @@ characters (avoiding redundancy by ignoring repeated combinations).
 2. Install pyenchant. \
 ```pip install --user pyenchant```
 
-3. Run the Main.py from shell. \
-```python Main.py```
+3. Run Main.py from shell. \
+```python main.py```
