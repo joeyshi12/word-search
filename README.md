@@ -6,11 +6,11 @@ characters (avoiding redundancy by ignoring repeated combinations).
 
 ## Getting Started
 
-1. Clone the project \
+1. Clone the repository. \
 ```git clone https://github.com/joeyshi12/gen-rec-word-search.git```
 
-2. Import pyenchant \
+2. Install pyenchant. \
 ```pip install --user pyenchant```
 
-3. Run the project from shell \
-```python main.py```
+3. Run the Main.py from shell. \
+```python Main.py```
