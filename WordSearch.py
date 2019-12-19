@@ -1,5 +1,7 @@
 import enchant
 
+from exception.InvalidInputException import InvalidInputException
+
 
 def is_valid_word(word: str) -> bool:
     """returns true if word is in the Canadian english dictionary; else, returns false"""
@@ -34,9 +36,9 @@ def list_minus(lox: list, loy: list) -> list:
             return [lox[0]] + list_minus(lox[1::], loy)
 
 
-# REQUIRES: chars is a list of single characters
 def search_words(chars: list, n: int) -> list:
-    """returns a list of all possible words from chars with length n"""
+    """returns a list of all possible words from chars with length n
+    raise InvalidInputException if chars is not a list of characters"""
 
     def fn_for_word(word: str) -> list:
         if len(word) == n:
@@ -53,4 +55,7 @@ def search_words(chars: list, n: int) -> list:
         else:
             return fn_for_word(words[0]) + fn_for_words(words[1::])
 
+    for char in chars:
+        if len(char) != 1:
+            raise InvalidInputException
     return fn_for_word('')

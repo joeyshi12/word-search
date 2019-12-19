@@ -3,7 +3,7 @@ import unittest
 from WordSearch import *
 
 
-class WordSearchTest(unittest.TestCase):
+class TestWordSearch(unittest.TestCase):
 
     def test_is_valid_word(self):
         self.assertTrue(is_valid_word('word'))
