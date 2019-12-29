@@ -9,5 +9,4 @@ if __name__ == '__main__':
         n = int(input_int)
 
         print("All possible words:")
-        for string in Ws.search_words(chars, n):
-            print(string)
+        Ws.search_words(chars, n)

@@ -39,10 +39,12 @@ def list_minus(lox: list, loy: list) -> list:
 def search_words(chars: list, n: int) -> list:
     """returns a list of all possible words from chars with length n
     raise InvalidInputException if chars is not a list of characters"""
+    path = []
 
     def fn_for_word(word: str) -> list:
         if len(word) == n:
             if is_valid_word(word):
+                print(word)
                 return [word]
             else:
                 return []
@@ -59,3 +61,5 @@ def search_words(chars: list, n: int) -> list:
         if len(char) != 1:
             raise InvalidInputException
     return fn_for_word('')
+
+
