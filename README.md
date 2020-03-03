@@ -1,16 +1,21 @@
-# gen-rec-word-search
+# word-search
 
-This project is a demonstration of the problem-solving power of generative recursion. Given a list of characters and 
-length n, the function generates and searches through an arity tree of depth n consisting of possible combinations of 
-characters (avoiding redundancy by ignoring repeated combinations). 
+This project is a demonstration of different techniques that can be used for
+searching through all possible words from a given list of characters. The
+following methods are currently implemented:
+
+- Generative-Recursive Search
+- Depth-First Search
+- Breadth-First Search
+
 
 ## Getting Started
 
 1. Clone the repository. \
-```git clone https://github.com/joeyshi12/gen-rec-word-search.git```
+```git clone https://github.com/joeyshi12/word-search.git```
 
 2. Install pyenchant. \
 ```pip install --user pyenchant```
 
-3. Run Main.py from shell. \
-```python main.py```
+3. Run the python files from shell. \
+ex. ```python WordBFS.py```
